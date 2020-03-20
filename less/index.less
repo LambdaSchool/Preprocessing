@@ -49,11 +49,153 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+@color-u2: #E3D6D6;
+@color-u1: #5986B8;
+@color-base: #0D1A66;
+@color-d1: #43578C;
+@color-d2: #130E17;
+
+.spacing() {
+	margin: 1%;
+	padding: 2%;
+}
+.line(){
+	line-height: 1.4;
+}
 * {
     box-sizing: border-box;
+}
+.containter{
+	width: 900px;
+	margin: auto;
 }
 
 html, body {
     height: 100%;
 }
 
+nav{
+	.spacing();
+	display: flex;
+	justify-content: space-evenly;
+	background-color: @color-u2;
+	a{
+		justify-content: center;
+		text-decoration: none;
+		color: blue;
+		&:hover{
+			color: black;
+			text-decoration: underline;
+		
+		} // end hover
+	}// end a
+} // end nav
+.intro{
+	display: flex;
+	justify-content: space-around;
+	// flex-wrap: wrap;
+		background-color: @color-u1;
+		.spacing();
+		img{
+			// max-width: 10%;
+		}
+		h1{
+			font-size: 35px;
+			text-align: center;
+		} // end h1
+		h2{
+			color: @color-d2;
+			text-align: center;
+			font-size: 20px;
+		}// end h2
+		.info{
+			.line();
+			.spacing();
+			width: 50%;
+			flex-direction: column;
+		}
+}//end intro
+.skills{
+	.spacing();
+	background-color: @color-d1;
+	color: @color-u2;
+	display: flex;
+	justify-content: space-around;
+	.line();
+	// flex-wrap: wrap;
+	// width: 50%;
+
+	h2{
+		flex-wrap: wrap;
+		font-size: 20px;
+		// text-align: center;
+		display: inline-block;
+	}
+	div{
+		width: 30%;
+		display: flex;
+		flex-direction: column;
+		height: 50%;
+	}
+	.test-list{
+		width: 30%;
+	}
+	img{
+		max-width: 25%;
+	}
+}
+.work-history{
+	.spacing();
+	.line();
+	background-color: @color-d2;
+	color: @color-u2;
+	display: flex;
+	h2{
+		font-size: 20px;
+	}
+	img{
+		width: 50%;
+		height: 80%;
+
+	}
+	.ending{
+		flex-direction: column;
+	}
+}
+@media(max-width:500px){
+	.containter{
+		width: 90%;
+		margin: auto;
+	}
+	.intro{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		div{
+			align-items: center;
+			width: 100%;
+
+		}
+		.title{
+			align-items: center;
+			align-content: center;
+		}
+		img{
+			padding-left: 15%;
+		}
+	}
+	.skills{
+		img{
+			display: none;
+		}
+	}
+	.work-history{
+		flex-direction: column;
+		img{
+			display: none;
+		}
+		p{
+			.line();
+		}
+	}
+}
