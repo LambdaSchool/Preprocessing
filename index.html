@@ -1,19 +1,95 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Resume</title>
 
-  <title>My Resume</title>
+    <link rel="stylesheet" href="css/index.css">
 
-  <link rel="stylesheet" href="css/index.css">
-
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="https://lyndsiwilliams.github.io/portfolio-website/" target="_blank">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="top">
+        <div class="intro">
+            <img class="topIMG" src="img/glasses.jpg" alt="A pair of glasses on a desk in front of a monitor displaying code.">
+            <h1>Lyndsi Williams</h1>
+            <h2>Full Stack Web Developer</h2>
+            <p>I have a strong passion for programming, technology, and video games!</p>
+        </div>
+    </section>
+    <section class="middle">
+        <div class="content">
+            <h3>Skills</h3>
+            <ul>
+                <li>Excellent and successful leadership skills.</li>
+                <li>Typing speed averaging around 72 WPM.</li>
+                <li>Great oral, instant messaging, and email communication skills.</li>
+                <li>Exceptional knowledge of Excel, Word, etc.</li>
+                <li>Amazing people skills.</li>
+                <li>Very organized and professional.</li>
+                <li>Excellent problem solving skills.</li>
+                <li>Lifetime of experience in proper typing and computer skills.</li>
+            </ul>
+        </div>
+        <div class="workHis">
+            <h3>Work History</h3>
+            <ul class="workList">
+                <li>Pro Unlimited (Electronic Arts)</li>
+                <li>Quality Assurance Tester/Database Manager</li>
+                <li>Baton Rouge, LA</li>
+                <li>March 2011 - March 2012</li>
+            </ul>
+            <ul class="workList">
+                <li>Pro Unlimited (Electronic Arts)</li>
+                <li>Quality Assurance Tester/Database Manager</li>
+                <li>Baton Rouge, LA</li>
+                <li>July 2012 - July 2013</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="bottom">
+        <div class="contact">
+            <h2>Get in touch</h2>
+            <div class="form">
+                <form method="post" action="#">
+                    <div class="field half first">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" value="" />
+                    </div>
+                    <div class="field half">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" value="" />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="6"></textarea>
+                    </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+            </ul>
+            </form>
+
+        </div>
+    </section>
+    <footer>
+        <p>Copyright Awesomeness 2019</p>
+    </footer>
 </body>
+
 </html>
