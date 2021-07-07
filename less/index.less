@@ -54,6 +54,142 @@ table {
 }
 
 html, body {
-    height: 100%;
+		height: 100%;
+		font-family: 'Roboto Mono', monospace;
 }
 
+/*== Global ==================================================================*/
+
+/*-- Variables ---------------------------------*/
+
+// Grayscale colors
+@gray-1: #C0C0C0; // Silver
+@gray-2: #F5F5F5; // WhiteSmoke
+@gray-3: #FAFAFA; // Gray98
+
+// font-sizes
+@baseline: 1.6rem;
+@h1: 6.0rem;
+@h2: 2.8rem;
+
+/*-- Mixins ------------------------------------*/
+
+// Flexbox Mixins
+.wrap-flex() {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.custom-flex(@align, @justify) {
+	display: flex;
+	align-items: @align;
+	justify-content: @justify;
+}
+
+// Card Mixin
+.card() {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 9px 19px 0 rgba(0,0,0,.05);
+	margin-bottom: 25px;
+	padding: 20px;
+}
+
+// Mobile Media Query Mixin
+.mobile() {
+	@media (max-width: 500px) {
+		width: 98%;
+	}
+}
+
+/*== Layout ==================================================================*/
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: @gray-3;
+}
+
+.container {
+	font-size: @baseline;
+	margin: 0 auto;
+	max-width: 880px;
+
+	@media (max-width: 500px) {
+		max-width: 470px;
+	}
+
+	h1 {
+		font-size: @h1;
+	}
+
+	h2 {
+		font-size: @h2;
+		font-weight: bold;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+/*-- Header ------------------------------------*/
+
+header {
+	.custom-flex(center, flex-end);
+
+	nav {
+		.custom-flex(center, space-between);
+		margin: 25px 2% 25px 0;
+		width: 45%;
+		.mobile();
+	}
+}
+
+/*-- Content -----------------------------------*/
+
+main {
+	.wrap-flex();
+	
+	.intro {
+		.card();
+		width: 98%;
+
+		img {
+			border-radius: 10px;
+			max-width: 500px;
+			width: 100%;
+		}
+	}
+
+	.bio {
+		.card();
+		margin-right: 2%;
+		width: 48%;
+		.mobile();
+	}
+
+	.skills {
+		.card();
+		width: 48%;
+		.mobile();
+	}
+
+	.work-history {
+		.card();
+		width: 98%;
+	}
+
+	.contact {
+		.card();
+		width: 98%;
+	
+		address {
+			text-align: center;
+		}
+	}
+}
