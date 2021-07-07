@@ -1,1 +1,246 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  background: #0AA7FF;
+}
+.flexStyles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.doubleHighlight {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 2% auto;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+}
+.container > * {
+  margin: 3%;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header p {
+  font-family: 'Kirang Haerang', cursive;
+  font-size: 5rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+header nav a {
+  margin: 5%;
+  width: 100%;
+  text-align: center;
+}
+.about {
+  background: #AAD3EA;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.about > * {
+  padding: 2%;
+}
+.about img {
+  box-shadow: 1px 1px 10px black;
+  border-radius: 5%;
+  width: 30%;
+  margin: 2%;
+}
+.about .phrase {
+  font-family: 'Kirang Haerang', cursive;
+}
+.skills ul {
+  list-style-type: square;
+  list-style-position: inside;
+}
+.skills ul li {
+  padding: 1%;
+}
+.skills ul li .highlight {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.resume {
+  margin: 3%;
+}
+.resume table,
+.resume tfoot {
+  text-align: center;
+  border: 5px double black;
+  margin: 0 auto;
+  width: 90%;
+  background: #AAD3EA;
+}
+.resume th {
+  font-weight: 800;
+  text-decoration: underline;
+}
+.resume th,
+.resume td {
+  border: 1px solid black;
+  padding: 2%;
+}
+.contact .info {
+  border: 5px ridge black;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2;
+}
+.footer p {
+  text-align: right;
+}
